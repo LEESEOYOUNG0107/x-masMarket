@@ -1,0 +1,31 @@
+body{
+    background-color: #fffbf6;
+}
+table{
+    margin: auto;
+    margin-top: 100px;
+}
+h1{
+    text-align: center;
+    color: rgb(226, 44, 44);  
+    font-size: 60px;
+}
+.inputt{
+    background-color: #fffbf6;
+    border: 2px solid rgb(226, 44, 44);
+    border-radius: 9px;
+    width: 300px;
+    height: 50px;
+}
+input{
+    margin-bottom: 15px;
+}
+#button{
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(226, 44, 44);
+    border-radius: 4px;
+    width: 307px;
+    height: 50px;
+}

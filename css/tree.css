@@ -1,0 +1,100 @@
+body{
+    background-color: #fffbf6;;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+#sidebar{
+    position: fixed;
+    top: -50px;  
+    right: 20px;
+    margin-right: -23px;
+}
+#sidebar > a{
+    text-decoration: none ;
+}
+#home_img{
+    border-radius: 30px;
+    width: 1100px;
+    height: 570px;
+}
+.menu{ 
+    background-color: rgb(226, 44, 44);   
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    height: 20px;
+    width: 170px;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;   
+    padding: 20px 0;    
+    color: #f1e1ce; 
+}  
+#me{
+    margin-top: -10px;
+} 
+.product{
+    max-width: calc(90% - 200px);
+    /* overflow: hidden; */
+}
+.product-box{
+    width: 20%;
+    height: 350px;
+    border-radius: 30px;
+    float: left;
+    margin-right: 24px;
+    margin-top: 30px;
+}
+.product_img{
+    width: 100%;
+    height: 220px;
+    border-radius: 30px;
+}
+.product_contents{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.product_seller{
+    font-size: 14px;
+    font-weight: 600;
+}
+.product_name{
+    font-size: 15px;
+}
+.product_price{
+    font-size: 16px;
+    font-weight: 600;
+}
+#foot_text{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #e6d9c9;
+    margin-top: 60%;
+    width: 78%;
+}
+#address{
+    font-size: 18px;
+    font-weight: 590;
+    font-family: "Do Hyeon", sans-serif;
+}
+#contact{
+    font-size: 18px;
+    font-weight: 590;
+    font-family: "Do Hyeon", sans-serif;
+}
+#logo{
+    margin-bottom: 20px;
+}
+#small_logo{
+    width: 13%;
+}
+.text{
+    margin-bottom: 1%;
+}
+
