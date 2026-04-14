@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>크리스마스 상점 트리 페이지</title>
-    <link rel="stylesheet" href="../css/tree.css"/>
+    <link rel="stylesheet" href="../css/tree.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="../Project_imgs/x-mas_bear.png">
 </head>
+
 <body>
     <header>
         <img src="../Project_imgs/Tree Christmas2.jpg" id="home_img">
     </header>
     <div id="sidebar">
         <div id="logo"><a href="index.html"><img src="../Project_imgs/X-MAS Logo.png"></a></div>
-        <a href="#tree"><div class="menu" id="me">🎄크기별 트리</div></a>
-        <a href="#wreath"><div class="menu">리스</div></a>
-        <a href="#decoration"><div class="menu">트리장식</div></a>
-        <a href="./shopcart.html"><div class="menu">장바구니</div></a>
+        <a href="#tree">
+            <div class="menu" id="me">🎄크기별 트리</div>
+        </a>
+        <a href="#wreath">
+            <div class="menu">리스</div>
+        </a>
+        <a href="#decoration">
+            <div class="menu">트리장식</div>
+        </a>
+        <a href="./shopcart.html">
+            <div class="menu">장바구니</div>
+        </a>
     </div>
     <main class="product">
-        <a name="tree"><h2>L, M, S 트리</h2></a>
+        <a name="tree">
+            <h2>L, M, S 트리</h2>
+        </a>
         <div class="product-box">
             <img src="../Project_imgs/S_tree.png" class="product_img">
             <div class="product_contents">
                 <span class="product_seller">| 플라워 트리 |</span>
                 <span class="product_name">무장식 미니 트리 30cm</span>
                 <span class="product_price">9,000원</span>
-            </div>            
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/S_tree (2).png" class="product_img">
@@ -37,7 +52,8 @@
                 <span class="product_seller">| BLC TREE |</span>
                 <span class="product_name">미니 트리 90cm 인형장식 전구 풀세트</span>
                 <span class="product_price">42,750원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/S_tree (3).png" class="product_img">
@@ -45,7 +61,8 @@
                 <span class="product_seller">| 트리월드 |</span>
                 <span class="product_name">90cm 솔잎 혼합 미니트리</span>
                 <span class="product_price">18,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/S_tree (4).png" class="product_img">
@@ -53,7 +70,8 @@
                 <span class="product_seller">| 베베데코 |</span>
                 <span class="product_name">미니 트리 트윙클 무장식 풀세트 45cm</span>
                 <span class="product_price">19,900원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/M_tree.png" class="product_img">
@@ -61,7 +79,8 @@
                 <span class="product_seller">| 아웃팅21 |</span>
                 <span class="product_name">무장식 빼곡빼곡 트리 120cm</span>
                 <span class="product_price">23,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/M_tree (2).png" class="product_img">
@@ -69,7 +88,8 @@
                 <span class="product_seller">| 하트하트 샵 |</span>
                 <span class="product_name">트리 120cm</span>
                 <span class="product_price">53,700원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/M_tree (3).png" class="product_img">
@@ -77,7 +97,8 @@
                 <span class="product_seller">| 베르데 트리 |</span>
                 <span class="product_name">전나무 트리 150cm</span>
                 <span class="product_price">109,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/M_tree (4).png" class="product_img">
@@ -85,7 +106,8 @@
                 <span class="product_seller">| 플라워트리 |</span>
                 <span class="product_name">고급 무장식 혼합 알프트리 150cm</span>
                 <span class="product_price">150,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/L_tree.png" class="product_img">
@@ -93,7 +115,8 @@
                 <span class="product_seller">| 코지바이브 |</span>
                 <span class="product_name">코지바이브 대형 블랙트리 180cm</span>
                 <span class="product_price">498,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/L_tree (2).png" class="product_img">
@@ -101,7 +124,8 @@
                 <span class="product_seller">| 매료 크리스마스 트리 |</span>
                 <span class="product_name">매료 크리스마스 인형 고급 가정용 트리 180cm</span>
                 <span class="product_price">139,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/L_tree (3).png" class="product_img">
@@ -109,7 +133,8 @@
                 <span class="product_seller">| 아티파티 |</span>
                 <span class="product_name">아티파티 풍성한 뉴클래식 호텔식 대형트리 180cm</span>
                 <span class="product_price">343,500원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/L_tree (4).png" class="product_img">
@@ -117,10 +142,13 @@
                 <span class="product_seller">| 스탠다코 |</span>
                 <span class="product_name">대형 전나무 PE 트리 지네전구 세트 180cm</span>
                 <span class="product_price">264,500원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product">
-            <a name="wreath"><h2>리스</h2></a>
+            <a name="wreath">
+                <h2>리스</h2>
+            </a>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath.png" class="product_img">
@@ -128,7 +156,8 @@
                 <span class="product_seller">| 천가게 |</span>
                 <span class="product_name">벽장식 리스 현관 장식 전구 55cm</span>
                 <span class="product_price">29,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (2).png" class="product_img">
@@ -136,7 +165,8 @@
                 <span class="product_seller">| 제이닷트리 |</span>
                 <span class="product_name">60cm 프리미엄 리스 단품</span>
                 <span class="product_price">65,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (3).png" class="product_img">
@@ -144,7 +174,8 @@
                 <span class="product_seller">| 플라워민트 |</span>
                 <span class="product_name">리스 겨울 인테리어 소품 50cm</span>
                 <span class="product_price">32,900원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (4).png" class="product_img">
@@ -152,7 +183,8 @@
                 <span class="product_seller">| 하나가핀 |</span>
                 <span class="product_name">골드 빈티지 목마 오너먼트 프리미엄 조화 리스 45cm</span>
                 <span class="product_price">83,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (5).png" class="product_img">
@@ -160,34 +192,40 @@
                 <span class="product_seller">| 포사레 |</span>
                 <span class="product_name">크리스마스 테이블 벽 문틀 난간 롱 리스 270CM</span>
                 <span class="product_price">22,570원</span>
-            </div> 
-        </div>    
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
+        </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (1).png" class="product_img">
             <div class="product_contents">
                 <span class="product_seller">| 플라워트리 |</span>
                 <span class="product_name">크리스마스 벽장식 리스 사이프러스 벽걸이 34cm</span>
                 <span class="product_price">32,000원</span>
-            </div> 
-        </div>    
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
+        </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (6).png" class="product_img">
             <div class="product_contents">
                 <span class="product_seller">| 리베유(LiebeU) |</span>
                 <span class="product_name">크리스마스 레드 미니 넛츠리스 냉장고자석</span>
                 <span class="product_price">31,500원</span>
-            </div> 
-        </div>    
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
+        </div>
         <div class="product-box">
             <img src="../Project_imgs/wreath (7).png" class="product_img">
             <div class="product_contents">
-                <span class="product_seller">|  |</span>
+                <span class="product_seller">| |</span>
                 <span class="product_name">미리 크리스마스 🎄요요 리스(오너먼트)</span>
-                <span class="product_price"13,800>원</span>
-            </div> 
+                <span class="product_price" 13,800>원</span>
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product">
-            <a name="decoration"><h2>트리 장식</h2></a>
+            <a name="decoration">
+                <h2>트리 장식</h2>
+            </a>
         </div>
         <div class="product-box">
             <a name="decoration"></a><img src="../Project_imgs/ornament (1).png" class="product_img">
@@ -195,7 +233,8 @@
                 <span class="product_seller">| 홈트너 |</span>
                 <span class="product_name">트리 오너먼트 세트</span>
                 <span class="product_price">5,600원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (2).png" class="product_img">
@@ -203,7 +242,8 @@
                 <span class="product_seller">| 까사아카이브 |</span>
                 <span class="product_name">트리 오너먼트 세트 고드름 눈송이 크리스탈 아크링 유리</span>
                 <span class="product_price">4,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (3).png" class="product_img">
@@ -211,7 +251,8 @@
                 <span class="product_seller">| 트마 |</span>
                 <span class="product_name">크리스탈 오너먼트 트리 장식 </span>
                 <span class="product_price">8,800원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (4).png" class="product_img">
@@ -219,7 +260,8 @@
                 <span class="product_seller">| 다쥬샵 |</span>
                 <span class="product_name">미니어쳐 호두까기 병정 오너먼트 세트</span>
                 <span class="product_price">16,600원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (5).png" class="product_img">
@@ -227,7 +269,8 @@
                 <span class="product_seller">| 미스모네 |</span>
                 <span class="product_name">북유럽 미니 트리 장식 세트 </span>
                 <span class="product_price">3,500원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (6).png" class="product_img">
@@ -235,7 +278,8 @@
                 <span class="product_seller">| 플라우스 302 |</span>
                 <span class="product_name">흰색 계열 트리 오너먼트 세트</span>
                 <span class="product_price">13,500원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (7).png" class="product_img">
@@ -243,7 +287,8 @@
                 <span class="product_seller">| 다다소감 |</span>
                 <span class="product_name">트리 오너먼트 세트</span>
                 <span class="product_price">15,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/ornament (8).png" class="product_img">
@@ -251,7 +296,8 @@
                 <span class="product_seller">| 주펠트 |</span>
                 <span class="product_name">네팔 미니 오너먼트 양모 울 펠트</span>
                 <span class="product_price">7,500원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product">
             <h2>트리 전구</h2>
@@ -262,7 +308,8 @@
                 <span class="product_seller">| 펀앤펀 |</span>
                 <span class="product_name">와이어 줄 조명 앵두 전구 1m</span>
                 <span class="product_price">400원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/tree light bulb (2).png" class="product_img">
@@ -270,7 +317,8 @@
                 <span class="product_seller">| 제이토리 |</span>
                 <span class="product_name">LED 앵두 전구</span>
                 <span class="product_price">4,800원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/tree_lighting.png" class="product_img">
@@ -278,7 +326,8 @@
                 <span class="product_seller">| 시나몬샵 |</span>
                 <span class="product_name">야외 외부 태양광 와이어 크리스마스 트리 전구</span>
                 <span class="product_price">29,100원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+            </div>
         </div>
         <div class="product-box">
             <img src="../Project_imgs/tree_lighting (2).png" class="product_img">
@@ -286,7 +335,9 @@
                 <span class="product_seller">| 상준이네편의점 |</span>
                 <span class="product_name">크리스마스 트리장식 전구</span>
                 <span class="product_price">3,000원</span>
-            </div> 
+                <button class="add-cart-btn" onclick="addToCart(this)">장바구니 담기</button>
+
+            </div>
         </div>
     </main>
     <footer id="foot_text">
@@ -296,17 +347,25 @@
         <span id="contact">contact</span>
         <span>
             <i class="bi bi-envelope"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
             </svg>
             s2446@e-mirim.hs.kr
         </span>
         <span class="text">
             <i class="bi bi-telephone"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg>
             010-9220-2763
         </span>
     </footer>
+
+    <script src="./cart.js"></script>
 </body>
+
 </html>

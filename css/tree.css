@@ -38,7 +38,6 @@ body{
 } 
 .product{
     max-width: calc(90% - 200px);
-    /* overflow: hidden; */
 }
 .product-box{
     width: 20%;

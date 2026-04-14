@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크리스마스 상점 장바구니 페이지</title>
+    <link rel="stylesheet" href="../css/shiocart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="../Project_imgs/x-mas_bear.png">
+</head>
+
+<body>
+    <header style="text-align: center; padding: 20px;">
+        <h1>🎄 내 장바구니 🎄</h1>
+        <a href="shop.html" style="text-decoration: none; color: green; font-weight: bold;">← 쇼핑 계속하기</a>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <div id="cart-container">
+        </div>
+
+        <div style="margin-top: 30px; text-align: right; border-top: 2px solid #ccc; padding-top: 20px;">
+            <h2>총 결제 금액: <span id="total-price" style="color: red;">0</span>원</h2>
+            <button onclick="clearCart()"
+                style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">장바구니
+                비우기</button>
+        </div>
+    </main>
+
+    <script>
+        // 페이지가 로드될 때 장바구니 목록을 화면에 표시
+        window.onload = function () {
+            displayCart();
+        };
+
+        function displayCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const totalPriceElement = document.getElementById('total-price');
+
+            // localStorage에서 장바구니 데이터 가져오기
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let total = 0;
+
+            // 장바구니가 비어있는 경우
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p style="text-align: center; color: #666;">장바구니가 비어 있습니다.</p>';
+                totalPriceElement.innerText = '0';
+                return;
+            }
+
+            cartContainer.innerHTML = ''; // 기존 내용 초기화
+
+            // 장바구니 배열을 순회하며 HTML 생성
+            cart.forEach((item, index) => {
+                // 가격 문자열에서 숫자만 추출하여 계산 ("42,750원" -> 42750)
+                const priceNumber = parseInt(item.price.replace(/[^0-9]/g, ''));
+                total += priceNumber;
+
+                // 아이템 박스 생성
+                const itemDiv = document.createElement('div');
+                itemDiv.style.cssText = "display: flex; align-items: center; border-bottom: 1px solid #eee; padding: 10px 0; gap: 20px;";
+
+                itemDiv.innerHTML = `
+                    <img src="${item.img}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex-grow: 1;">
+                        <span style="font-size: 0.8em; color: #888;">${item.seller}</span>
+                        <h3 style="margin: 5px 0;">${item.name}</h3>
+                        <p style="margin: 0; font-weight: bold;">${item.price}</p>
+                    </div>
+                    <button onclick="removeItem(${index})" style="padding: 5px 10px; background-color: #ff4c4c; color: white; border: none; cursor: pointer; border-radius: 4px;">삭제</button>
+                `;
+                cartContainer.appendChild(itemDiv);
+            });
+
+            // 총합 업데이트 (천단위 콤마 찍기)
+            totalPriceElement.innerText = total.toLocaleString();
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // 해당 인덱스의 아이템 삭제
+            localStorage.setItem('cart', JSON.stringify(cart)); // 업데이트된 배열 다시 저장
+            displayCart(); // 화면 다시 그리기
+        }
+
+        function clearCart() {
+            if (confirm('장바구니를 모두 비우시겠습니까?')) {
+                localStorage.removeItem('cart'); // 저장소에서 장바구니 데이터 삭제
+                displayCart(); // 화면 다시 그리기
+            }
+        }
+    </script>
+</body>
+
+</html>
